@@ -5,10 +5,16 @@ class OtherPage extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
+		$this->load->helper('url');
 	}
 
 	// http://localhost/local/ci/learning/index.php/otherpage
 	public function index() {
-		echo 'This is the other page';
+		$this->load->helper('form');
+		$this->load->view('otherform');
+	}
+
+	public function receiver() {
+		echo 'Página Recebedora';
 	}
 }
